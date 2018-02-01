@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/', function(req,res){
     res.send("sample-node-api is up and running now");
